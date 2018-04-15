@@ -1,3 +1,24 @@
+resource cloudflare_page_rule "223n_tech_rule" {
+  "zone"     = "223n.tech"
+  "target"   = "blog.223n.tech/*"
+  "priority" = 1
+
+  "actions" = {
+    "ssl"              = "strict"
+    "always_use_https" = true
+  }
+}
+
+resource cloudflare_zone_settings_override "223n_tech_setting" {
+  name = "223n.tech"
+
+  settings {
+    ipv6             = "on"
+    ssl              = "strict"
+    always_use_https = "on"
+  }
+}
+
 resource cloudflare_record "223n_tech_mx1" {
   "domain"   = "223n.tech"
   "value"    = "aspmx.l.google.com"
