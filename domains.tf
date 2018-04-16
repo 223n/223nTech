@@ -96,16 +96,24 @@ resource cloudflare_record "223n_tech_dkim" {
   "name"    = "google._domainkey"
 }
 
+resource cloudflare_record "223n_tech_blog_google_search_console" {
+  "domain"  = "223n.tech"
+  "value"   = "google-site-verification=j2iRgDV1dcpeEU8SJ0VYd9kTnnPGQvWTS9zJsJv9Fv0"
+  "type"    = "TXT"
+  "proxied" = false
+  "name"    = "google_search_console"
+}
+
 resource cloudflare_record "223n_tech_blog_ns_primary" {
-  domain = "223n.tech"
-  name   = "blog"
-  type   = "NS"
-  value  = "ns1.dns.ne.jp"
+  "domain" = "223n.tech"
+  "name"   = "blog"
+  "type"   = "NS"
+  "value"  = "ns1.dns.ne.jp"
 }
 
 resource cloudflare_record "223n_tech_blog_ns_secondary" {
-  domain = "223n.tech"
-  name   = "blog"
-  type   = "NS"
-  value  = "ns2.dns.ne.jp"
+  "domain" = "223n.tech"
+  "name"   = "blog"
+  "type"   = "NS"
+  "value"  = "ns2.dns.ne.jp"
 }
