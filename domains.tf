@@ -126,6 +126,13 @@ resource cloudflare_record "223n_tech_blog_ns_secondary" {
   "value"  = "ns2.dns.ne.jp"
 }
 
+resource cloudflare_record "223n_tech_hackmd_ns_primary" {
+  "domain" = "223n.tech"
+  "type"   = "A"
+  "name"   = "hackmd"
+  "value"  = "153.127.199.24"
+}
+
 /*
 resource cloudflare_record "223n_tech_issue" {
   "domain"  = "223n.tech"
