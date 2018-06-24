@@ -133,6 +133,13 @@ resource cloudflare_record "223n_tech_hackmd_ns_primary" {
   "value"  = "153.127.199.24"
 }
 
+resource cloudflare_record "223n_tech_sql_ns_primary" {
+  "domain" = "223n.tech"
+  "type"   = "A"
+  "name"   = "sql"
+  "value"  = "153.127.199.24"
+}
+
 /*
 resource cloudflare_record "223n_tech_issue" {
   "domain"  = "223n.tech"
