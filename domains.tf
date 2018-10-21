@@ -140,26 +140,42 @@ resource cloudflare_record "223n_tech_sql_ns_primary" {
   "value"  = "153.127.199.24"
 }
 
-/*
+resource cloudflare_record "223n_tech_vault_ns_primary" {
+  "domain" = "223n.tech"
+  "type"   = "A"
+  "name"   = "vault"
+  "value"  = "153.127.199.24"
+}
+
 resource cloudflare_record "223n_tech_issue" {
   "domain"  = "223n.tech"
   "type"    = "CAA"
   "name"    = "@"
-  "value"   = "0 issue \"letsencrypt.org\""
+  "data"    = {
+                "flags"  = "0"
+                "tag"    = "issue"
+                "value"  = "letsencrypt.org"
+              }
 }
 
 resource cloudflare_record "223n_tech_issuewild" {
   "domain"  = "223n.tech"
-  "name"    = "@"
   "type"    = "CAA"
-  "value"   = "0 issuewild \"letsencrypt.org\""
+  "name"    = "@"
+  "data"    = {
+                "flags"  = "0"
+                "tag"    = "issuewild"
+                "value"  = "letsencrypt.org"
+              }
 }
 
 resource cloudflare_record "223n_tech_iodef" {
   "domain"  = "223n.tech"
-  "name"    = "@"
   "type"    = "CAA"
-  "value"   = "0 iodef \"223n@223n.tech\""
+  "name"    = "@"
+  "data"    = {
+                "flags"  = "0"
+                "tag"    = "iodef"
+                "value"  = "223n@223n.tech"
+              }
 }
-*/
-
