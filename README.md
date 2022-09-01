@@ -8,10 +8,11 @@
 
 環境変数に下表の値を設定する必要があります。
 
-| 変数名            | 設定する値                             |
-| ----------------- | -------------------------------------- |
-| CLOUDFLARE_EMAIL  | Clougflareに登録しているメールアドレス |
-| CLOUDFLARE_TOKEN  | Global API Key                         |
+| 変数名                    | 設定する値                             |
+| ------------------------- | -------------------------------------- |
+| TF_VAR_CLOUDFLARE_EMAIL   | Clougflareに登録しているメールアドレス |
+| TF_VAR_CLOUDFLARE_TOKEN   | Global API Key                         |
+| TF_VAR_CLOUDFLARE_ZONE_ID | 制御対象のゾーンID                     |
 
 ## License
 
