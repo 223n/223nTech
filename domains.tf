@@ -20,11 +20,6 @@ variable "CLOUDFLARE_ZONE_ID" {
   type    = string
 }
 
-locals {
-  domain   = "223n.tech"
-  hostname = "223n.tech"
-}
-
 provider "cloudflare" {
   email   = var.CLOUDFLARE_EMAIL
   api_key = var.CLOUDFLARE_TOKEN
