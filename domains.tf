@@ -109,7 +109,7 @@ resource "cloudflare_record" "_223n_tech_dmarc" {
   zone_id  = var.CLOUDFLARE_ZONE_ID
   type    = "TXT"
   name    = "_dmarc"
-  value   = "v=DMARC1; p=none; rua=mailto:223n@223n.tech"
+  value   = "v=DMARC1; p=none; rua=mailto:223n@223n.tech; ruf=mailto;223n@223n.tech"
   proxied = false
 }
 
