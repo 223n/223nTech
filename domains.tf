@@ -25,10 +25,22 @@ provider "cloudflare" {
   api_key = var.CLOUDFLARE_TOKEN
 }
 
+resource "cloudflare_page_rule" "_223n_tech_rule_at" {
+  zone_id  = var.CLOUDFLARE_ZONE_ID
+  target   = "223n.tech/*"
+  priority = 1
+  actions {
+    forwarding_url {
+      url         = "https://blog.223n.tech"
+      status_code = 302
+    }
+  }
+}
+
 resource "cloudflare_page_rule" "_223n_tech_rule" {
   zone_id  = var.CLOUDFLARE_ZONE_ID
   target   = "blog.223n.tech/*"
-  priority = 1
+  priority = 2
   actions {
     ssl              = "strict"
     always_use_https = true
